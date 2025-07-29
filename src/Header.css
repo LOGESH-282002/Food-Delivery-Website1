@@ -23,7 +23,37 @@
     gap: 0.75rem;
     text-decoration: none;
   }
-  
+
+.responsive-nav-list li a {
+  text-decoration: none;
+  color: gray;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: Roboto;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.responsive-nav-list li a.active {
+  color: #f97316; 
+  font-weight: 700;
+}
+
+.responsive-nav-list li a.active::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+.responsive-nav-list li a::after {
+
+}
+
+.responsive-nav-list li a:hover {
+  color: #1f2937;
+}
+
   .logo img {
     height: 44px;
   }

@@ -1,14 +1,14 @@
 import './Header.css';
 import { useState, useRef, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { useCart } from './CartContext.jsx';
 
-function Header({ 
-  searchTerm = '', 
-  onSearchChange = () => {}, 
-  swiggyCategories = [], 
-  selectedCategory = null, 
-  onCategoryClick = () => {} 
+function Header({
+  searchTerm = '',
+  onSearchChange = () => {},
+  swiggyCategories = [],
+  selectedCategory = null,
+  onCategoryClick = () => {}
 }) {
   const [navOpen, setNavOpen] = useState(false);
   const { cartItems } = useCart();
@@ -35,15 +35,15 @@ function Header({
   return (
     <div className="header responsive-header head">
       <nav className="responsive-nav">
-        <a className='logo responsive-logo' href="">
+        <a className='logo responsive-logo' href="/">
           <img src="/delivery-man.png" alt="YumCart Logo" />
           <p>YumCart</p>
         </a>
         <ul className={`responsive-nav-list${navOpen ? ' open' : ''}`}>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/cart">Cart ({cartItems.reduce((acc, item) => acc + item.quantity, 0)})</Link></li>
-          <li><Link to="/favorites">Favorites</Link></li>
-          <li><Link to="/about">About</Link></li>
+          <li><NavLink to="/">Home</NavLink></li>
+          <li><NavLink to="/cart">Cart ({cartItems.reduce((acc, item) => acc + item.quantity, 0)})</NavLink></li>
+          <li><NavLink to="/favorites">Favorites</NavLink></li>
+          <li><NavLink to="/about">About</NavLink></li>
         </ul>
         {onSearchChange !== (() => {}) && (
           <input

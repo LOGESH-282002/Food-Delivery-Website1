@@ -1,57 +1,12 @@
-import React, { useState} from 'react';
+import React from 'react';
 import './About.css';
-const useCart = () => ({
-  cartItems: [{ id: 1, quantity: 2 }, { id: 2, quantity: 1 }] 
-});
+import Header from './Header';
 
-const Link = ({ to, children }) => <a href={to}>{children}</a>;
-function Header({ 
-  searchTerm = '', 
-  onSearchChange = () => {}, 
-}) {
-  const [navOpen, setNavOpen] = useState(false);
-  const { cartItems } = useCart();
-
-  return (
-    <div className="header responsive-header head">
-      <nav className="responsive-nav">
-        <a className='logo responsive-logo' href="/">
-          <img src="/delivery-man.png" alt="YumCart Logo" style={{width: '40px', marginRight: '10px'}} />
-          <p>YumCart</p>
-        </a>
-        <ul className={`responsive-nav-list${navOpen ? ' open' : ''}`}>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/cart">Cart ({cartItems.reduce((acc, item) => acc + item.quantity, 0)})</Link></li>
-          <li><Link to="/favorites">Favorites</Link></li>
-          <li><Link to="/about">About</Link></li>
-        </ul>
-        {onSearchChange.toString() !== (() => {}).toString() && (
-          <input
-            type="text"
-            placeholder="Search restaurants..."
-            className="responsive-search"
-            value={searchTerm}
-            onChange={onSearchChange}
-          />
-        )}
-        <button
-          className="hamburger"
-          aria-label="Toggle navigation menu"
-          onClick={() => setNavOpen(open => !open)}
-        >
-          <span className="hamburger-bar"></span>
-          <span className="hamburger-bar"></span>
-          <span className="hamburger-bar"></span>
-        </button>
-      </nav>
-    </div>
-  );
-}
 function About() {
   return (
     <div className='main'>
+      <Header /> 
       
-      <Header />
       <div className="about-container">
         <div className="about-hero">
           <h1>About YumCart</h1>
