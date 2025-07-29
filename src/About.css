@@ -1,0 +1,80 @@
+
+.about-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+  }
+  
+  .about-hero {
+    text-align: center;
+    background: linear-gradient(135deg, #ff6a00, #ee0979);
+    color: #fff;
+    padding: 50px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .about-subtitle {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-top: 0;
+  }
+  
+  .about-section {
+    margin-top: 40px;
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .about-section h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #ff6a00;
+  }
+  
+  .about-section p,
+  .about-section li {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .about-section ul {
+    padding-left: 20px;
+  }
+  
+  .about-section li {
+    margin-bottom: 12px;
+  }
+  
+  .about-section li strong {
+    color: #333;
+  }
+  
+  .about-section a {
+    color: #ee0979;
+    text-decoration: none;
+  }
+  
+  .about-section a:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 768px) {
+    .about-hero h1 {
+      font-size: 2.2rem;
+    }
+  
+    .about-section h2 {
+      font-size: 1.6rem;
+    }
+  }
+  
