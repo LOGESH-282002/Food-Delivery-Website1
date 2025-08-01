@@ -9,7 +9,6 @@ function Cart() {
   const [debouncedSearchTerm, setDebouncedSearchTerm] = useState('');
   const [filteredCartItems, setFilteredCartItems] = useState([]);
 
-  // Debounce the search term to avoid filtering on every keystroke
   useEffect(() => {
     const handler = setTimeout(() => {
       setDebouncedSearchTerm(searchTerm);
