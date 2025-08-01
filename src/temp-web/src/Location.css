@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@700&display=swap');
+
+  .contact-map-section {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FFFFFF;
+  }
+
+  .contact-info-bar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 24px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    background-color: #FFFFFF;
+    position: relative;
+    z-index: 2;
+  }
+
+  .contact-info-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .contact-number-circle {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .contact-number-circle::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 3px solid #FACC15;
+    border-radius: 50%;
+    transform: scale(0.8);
+  }
+
+  .contact-number-circle span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #FACC15;
+  }
+
+  .contact-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #000000;
+    margin: 0 0 4px 0;
+  }
+
+  .contact-detail {
+    font-size: 0.95rem;
+    color: #6B7280;
+    margin: 0;
+  }
+
+  .map-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+  }
+
+  .map-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(80%) contrast(1.1);
+    opacity: 0.8;
+  }
+  
+  .map-marker {
+    position: absolute;
+    border-radius: 50%;
+    background-color: #FACC15;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.5), 0 4px 10px rgba(0,0,0,0.2);
+    cursor: pointer;
+  }
+
+  .location-1 {
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #3B82F6;
+  }
+  
+  .location-2 {
+    width: 30px;
+    height: 30px;
+    top: 25%;
+    right: 15%;
+  }
+  @media (max-width: 992px) {
+    .contact-info-bar {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .contact-info-item {
+      flex-direction: column;
+      text-align: center;
+      gap: 12px;
+    }
+    .map-container {
+      height: 350px;
+    }
+  }

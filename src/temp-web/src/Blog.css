@@ -1,0 +1,35 @@
+.header-container11 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 48px 96px;
+  font-family: sans-serif;
+}
+
+.title {
+  color: #2c234d;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.breadcrumb-container {
+  background-color: #f7c32e;
+  padding: 16px 32px;
+  border-radius: 8px;
+}
+
+.home-link,
+.breadcrumb-separator,
+.current-page {
+  color: #333;
+  font-size: 16px;
+}
+
+.home-link {
+  text-decoration: none;
+}
+
+.current-page {
+  font-weight: bold;
+}

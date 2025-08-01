@@ -1,0 +1,190 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+  background-color: #ffffff;
+  font-family: 'Poppins', Arial, sans-serif;
+  gap: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.leftColumn {
+  flex: 1 1 400px;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 10;
+}
+
+.heading1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: #1e2d3b;
+  line-height: 1.2;
+  margin: 0 0 1.5rem 0;
+}
+
+.paragraph {
+  font-size: 1rem;
+  color: #8693a0;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.buttonGroup {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.primaryButton {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background-color: #ffc43a;
+  color: #1e2d3b;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(255, 196, 58, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 196, 58, 0.5);
+}
+
+.secondaryButtonWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.secondaryButton {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 50%;
+  color: #495057;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.secondaryButton:hover {
+  background-color: #f8f9fa;
+  border-color: #ced4da;
+}
+
+.secondaryButtonLabel {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #495057;
+}
+
+.rightColumn {
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 500px;
+}
+
+.imageWrapper {
+  overflow: hidden;
+  position: relative;
+  left: 20%;
+  z-index: 5;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  background-color: rgb(243, 243, 243);
+}
+
+.image-girl {
+  width: 60%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dot {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 6;
+}
+
+.yellowDot {
+  width: 24px;
+  height: 24px;
+  background-color: #ffc43a;
+  top: 10%;
+  right: 20%;
+}
+
+.orangeDot {
+  width: 12px;
+  height: 12px;
+  background-color: #f57c00;
+  top: 30%;
+  right: 10%;
+}
+
+.largeWhiteCircle {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  border: 22px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+  right: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 7;
+}
+
+.decoIcon {
+  position: absolute;
+  color: #e9ecef;
+  z-index: 1;
+}
+
+.faintIcon {
+  top: 15%;
+  left: 10%;
+}
+.decoIconPlaceholder {
+  position: absolute;
+  border: 5px solid #f8f9fa;
+  border-radius: 50%;
+  z-index: 6;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+.cupcakeIcon {
+  width: 40px;
+  height: 40px;
+  top: 5%;
+  right: 40%;
+}
+
+.burgerIcon {
+  width: 70px;
+  height: 70px;
+  bottom: 15%;
+  right: 15%;
+}
+
+.buttonGroup{
+  flex-wrap: initial;
+}

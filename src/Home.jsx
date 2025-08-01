@@ -7,7 +7,7 @@ import Header from './Header.jsx';
 import RestaurantPopup from './RestaurantPopup.jsx'; 
 import './RestaurantPopup.css'; 
 
-const SWIGGY_API_URL = '/api/dapi/restaurants/list/v5?lat=11.9415915&lng=79.8083133&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING';
+const SWIGGY_API_URL = import.meta.env.VITE_SWIGGY_API_URL;
 
 function Home() {
   const [masterRestaurantList, setMasterRestaurantList] = useState([]);
@@ -88,7 +88,7 @@ function Home() {
           const params = new URLSearchParams(selectedCategory.entityId.split('?')[1]);
           const collectionId = params.get('collection_id');
           const tags = params.get('tags');
-          const CATEGORY_API_URL = `/api/dapi/restaurants/list/v5?lat=11.9415915&lng=79.8083133&collection=${collectionId}&tags=${tags}&sortBy=&filters=&type=rcv2&offset=0&page_type=null`;
+          const CATEGORY_API_URL = `${import.meta.env.VITE_SWIGGY_CATEGORY_API_BASE}?collection=${collectionId}&tags=${tags}&sortBy=&filters=&type=rcv2&offset=0&page_type=null`;
           const res = await fetch(CATEGORY_API_URL);
           const data = await res.json();
           restaurants = data?.data?.cards?.map(c => c.card?.card?.info).filter(Boolean) || [];
